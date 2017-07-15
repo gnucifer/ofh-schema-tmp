@@ -24,8 +24,8 @@ DROP TABLE IF EXISTS ofh_user_image;
 CREATE TABLE ofh_user_image (
   user_id uuid REFERENCES ofh_user(id),
   file_id uuid REFERENCES ofh_file(id),
-  width tinyint, --TODO: type??
-  height tinyint,
+  width smallint, --TODO: type??
+  height smallint,
   caption text,
   alt text
 );
@@ -44,6 +44,6 @@ CREATE TABLE ofh_location (
 -- vendor?
 DROP TABLE IF EXISTS ofh_account_seller;
 CREATE TABLE ofh_account_seller (
-  id uuid PRIMARY KEY,
-  user_image_id
+  id uuid PRIMARY KEY
+  --user_image_id
 );
